@@ -1,1 +1,6 @@
-<p>This is the partial for view 1.</p>
+<div class="movies-list">
+    <div ng-repeat="(key, mov) in entries" ng-show="entries.length">
+        <img ng-src="{{mov.images[0].url}}" src="{{mov.images[0].url}}"/>
+        <p>{{mov.title}}</p>
+    </div>
+</div>

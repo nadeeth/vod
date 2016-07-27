@@ -9,6 +9,13 @@ angular.module('myApp.home', ['ngRoute'])
   });
 }])
 
-.controller('HomeCtrl', [function() {
+.controller('HomeCtrl', ['$scope','API', function($scope, API) {
+        
+    $scope.entries = [];
+
+    API.movies(function(res) {
+        $scope.entries = res.entries;
+        console.log(res.entries);
+    });
 
 }]);
