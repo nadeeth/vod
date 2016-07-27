@@ -8,5 +8,19 @@ and open the template in the editor.
     Author     : nadeeth
 */
 body {
-  background-color: #DDD;
+  background-color: #ddd;
+}
+.header {
+  height: 100px;
+  background-color: #888;
+  padding: 30px 75px 10px 40px;
+}
+.header h2 a {
+  color: #fff;
+}
+.header h2:first-child {
+  float: left;
+}
+.header h2:last-child {
+  float: right;
 }
