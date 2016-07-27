@@ -24,3 +24,10 @@ body {
 .header h2:last-child {
   float: right;
 }
+.movies-list {
+  padding: 40px;
+}
+.movies-list div {
+  float: left;
+  width: 214px;
+}

@@ -15,7 +15,6 @@ angular.module('myApp.home', ['ngRoute'])
 
     API.movies(function(res) {
         $scope.entries = res.entries;
-        console.log(res.entries);
     });
 
 }]);
