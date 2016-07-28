@@ -1,5 +1,5 @@
-<div class="movies-list">
-    <div ng-repeat="(key, mov) in entries" ng-show="entries.length">
+<div class="movies-list owl-carousel">
+    <div owl-carousel-item ng-repeat="(key, mov) in entries" ng-show="entries.length" class="item">
         <img ng-src="{{mov.images[0].url}}" src="{{mov.images[0].url}}"/>
         <p>{{mov.title}}</p>
     </div>

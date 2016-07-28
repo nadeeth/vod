@@ -4,6 +4,7 @@
 angular.module('myApp', [
   'ngRoute',
   'API',
+  'dir.owlCarousel',
   'myApp.home',
   'myApp.view2',
   'myApp.version'
