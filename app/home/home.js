@@ -9,12 +9,24 @@ angular.module('myApp.home', ['ngRoute'])
   });
 }])
 
-.controller('HomeCtrl', ['$scope','API', function($scope, API) {
+.controller('HomeCtrl', ['$scope','API','ngDialog', function($scope, API, ngDialog) {
         
     $scope.entries = [];
+    $scope.now_playing = null;
 
     API.movies(function(res) {
         $scope.entries = res.entries;
     });
+    
+    $scope.play = function(url) {
+        
+        $scope.now_playing = url;
+
+        ngDialog.open({ 
+            template: 'player.html', 
+            className: 'ngdialog-theme-default',
+            scope: $scope
+        });
+    };
 
 }]);

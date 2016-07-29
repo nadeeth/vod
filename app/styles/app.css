@@ -25,9 +25,11 @@ body {
   float: right;
 }
 .movies-list {
-  padding: 40px;
+  padding: 25px;
 }
-.movies-list div {
-  float: left;
-  width: 214px;
+.player-wrap {
+  margin-top: 15px;
+}
+.player-wrap video {
+  width: 100%;
 }
