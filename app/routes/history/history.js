@@ -4,7 +4,7 @@ angular.module('myApp.history', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/history', {
-    templateUrl: 'history/history.html',
+    templateUrl: 'routes/history/history.html',
     controller: 'HistoryCtrl'
   });
 }])
@@ -24,7 +24,7 @@ angular.module('myApp.history', ['ngRoute'])
         $scope.now_playing = mov;
 
         ngDialog.open({ 
-            template: 'player.html', 
+            template: 'snippets/player.html', 
             className: 'ngdialog-theme-default',
             scope: $scope
         });

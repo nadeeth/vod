@@ -30,6 +30,9 @@ body {
 .movies-list div {
   cursor: pointer;
 }
+.movies-list div .owl-item {
+  max-width: 230px;
+}
 .player-wrap {
   margin-top: 15px;
 }

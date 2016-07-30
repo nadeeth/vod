@@ -4,7 +4,7 @@ angular.module('myApp.home', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/home', {
-    templateUrl: 'home/home.html',
+    templateUrl: 'routes/home/home.html',
     controller: 'HomeCtrl'
   });
 }])
@@ -24,7 +24,7 @@ angular.module('myApp.home', ['ngRoute'])
 
         //Play video 
         ngDialog.open({ 
-            template: 'player.html', 
+            template: 'snippets/player.html', 
             className: 'ngdialog-theme-default',
             scope: $scope
         });

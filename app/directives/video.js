@@ -6,5 +6,11 @@ angular.module('dir.video', []).directive('videoClose',[function() {
         element[0].addEventListener('ended',function(){
             this.webkitExitFullscreen();
         });
+        //Make the video full screen on start
+        /*
+        element[0].addEventListener('play',function(){
+            this.webkitRequestFullscreen();
+        });
+        */
     };
  }]);

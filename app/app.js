@@ -8,8 +8,7 @@ angular.module('myApp', [
   'dir.video',
   'ngDialog',
   'myApp.home',
-  'myApp.history',
-  'myApp.version'
+  'myApp.history'
 ]).
 config(['$locationProvider', '$routeProvider','$sceDelegateProvider', function($locationProvider, $routeProvider, $sceDelegateProvider) {
   $locationProvider.hashPrefix('!');
