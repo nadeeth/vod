@@ -18,9 +18,9 @@ angular.module('myApp.home', ['ngRoute'])
         $scope.entries = res.entries;
     });
     
-    $scope.play = function(url) {
+    $scope.play = function(url,title,description) {
         
-        $scope.now_playing = url;
+        $scope.now_playing = {url:url,title:title,desc:description};
 
         ngDialog.open({ 
             template: 'player.html', 

@@ -27,6 +27,9 @@ body {
 .movies-list {
   padding: 25px;
 }
+.movies-list div {
+  cursor: pointer;
+}
 .player-wrap {
   margin-top: 15px;
 }

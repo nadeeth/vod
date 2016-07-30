@@ -1,5 +1,5 @@
 <div class="movies-list owl-carousel">
-    <div owl-carousel-item ng-repeat="(key, mov) in entries" ng-click="play(mov.contents[0].url)">
+    <div owl-carousel-item ng-repeat="(key, mov) in entries" ng-click="play(mov.contents[0].url,mov.title,mov.description)">
         <img ng-src="{{mov.images[0].url}}"/>
         <p>{{mov.title}}</p>
     </div>

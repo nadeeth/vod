@@ -1,6 +1,8 @@
 <div class="player-wrap">
     <video controls autoplay>
-        <source ng-src="{{now_playing}}" type="video/mp4">
+        <source ng-src="{{now_playing.url}}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
+    <h3>{{now_playing.title}}</h3>
+    <p>{{now_playing.desc}}</p>
 </div>
