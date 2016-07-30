@@ -18,9 +18,9 @@ angular.module('myApp.history', ['ngRoute'])
         $scope.watched_entries = res.entries;
     });
     
-    $scope.play = function(url,title,description) {
+    $scope.play = function(mov) {
         
-        $scope.now_playing = {url:url,title:title,desc:description};
+        $scope.now_playing = mov;
 
         ngDialog.open({ 
             template: 'player.html', 

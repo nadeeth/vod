@@ -18,14 +18,18 @@ angular.module('myApp.home', ['ngRoute'])
         $scope.entries = res.entries;
     });
     
-    $scope.play = function(url,title,description) {
+    $scope.play = function(mov) {
         
-        $scope.now_playing = {url:url,title:title,desc:description};
+        $scope.now_playing = mov;
 
         ngDialog.open({ 
             template: 'player.html', 
             className: 'ngdialog-theme-default',
             scope: $scope
+        });
+        
+        API.updateHistory(mov.id, function(data) {
+            alert(data);
         });
     };
 
