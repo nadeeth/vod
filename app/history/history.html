@@ -1,6 +1,9 @@
 <div class="movies-list owl-carousel">
-    <div owl-carousel-item ng-repeat="(key, mov) in watched_entries" ng-click="play(mov)">
-        <img ng-src="{{mov.images[0].url}}"/>
-        <p>{{mov.title}}</p>
+    <div owl-carousel-item ng-repeat="(key, mov) in watched_entries">
+        <a ng-click="play(mov)">
+            <img ng-src="{{mov.thumbnail}}"/>
+            <p>{{mov.title}}</p>
+        </a>
+        <a ng-click="delete($event, mov.vid)">Clear History</a>
     </div>
 </div>

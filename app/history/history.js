@@ -15,9 +15,10 @@ angular.module('myApp.history', ['ngRoute'])
     $scope.now_playing = null;
 
     API.watched(function(res) {
-        $scope.watched_entries = res.entries;
+        $scope.watched_entries = res;
     });
     
+    //Play the selected video from history
     $scope.play = function(mov) {
         
         $scope.now_playing = mov;
@@ -26,6 +27,16 @@ angular.module('myApp.history', ['ngRoute'])
             template: 'player.html', 
             className: 'ngdialog-theme-default',
             scope: $scope
+        });
+    };
+    
+    //Delete an entry from history
+    $scope.delete = function($event, id) {
+    
+        API.deleteHistory(id, function(res){
+            if (res.success) {
+                $($event.target).parent().hide();
+            }
         });
     };
 
