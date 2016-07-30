@@ -7,7 +7,7 @@ angular.module('myApp', [
   'dir.owlCarousel',
   'ngDialog',
   'myApp.home',
-  'myApp.view2',
+  'myApp.history',
   'myApp.version'
 ]).
 config(['$locationProvider', '$routeProvider','$sceDelegateProvider', function($locationProvider, $routeProvider, $sceDelegateProvider) {
