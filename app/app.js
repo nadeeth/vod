@@ -5,6 +5,7 @@ angular.module('myApp', [
   'ngRoute',
   'API',
   'dir.owlCarousel',
+  'dir.video',
   'ngDialog',
   'myApp.home',
   'myApp.history',

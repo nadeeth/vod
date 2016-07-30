@@ -37,7 +37,7 @@ angular.module('myApp.home', ['ngRoute'])
             title:mov.title, 
             description:mov.description}, function(data) {
             //Do something after updating history
-            console.log(data);
+            //console.log(data);
         });
     };
 

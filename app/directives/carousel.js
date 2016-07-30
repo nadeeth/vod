@@ -5,5 +5,5 @@ angular.module('dir.owlCarousel', []).directive('owlCarouselItem',[function() {
         if (scope.$last) {
             $(element.parent()).owlCarousel();
         }
-   };
+    };
  }]);
