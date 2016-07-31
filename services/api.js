@@ -7,54 +7,43 @@ angular.module('API', []).factory('API', ['$http', function($http){
 
     service.movies = function (callback) {
 
-        var req = {
+        service.sendRequest({
             method: 'GET',
             url: 'https://demo2697834.mockable.io/movies'
-        };
-        $http(req).then(function(response){
-            callback(response.data);
-        }, function(error){
-            alert("A movie API error.");
-        });
+        },callback);
     };
     
     service.watched = function (callback) {
 
-        var req = {
+        service.sendRequest({
             method: 'GET',
             url: api_url+'/history'
-        };
-        $http(req).then(function(response){
-            callback(response.data);
-        }, function(error){
-            alert("A movie API error.");
-        });
+        },callback);
     };
     
     service.updateHistory = function (data, callback) {
         
-        var req = {
+        service.sendRequest({
             method: 'PUT',
             url: api_url+'/history',
             data: data
-        };
-        $http(req).then(function(response){
-            callback(response.data);
-        }, function(error){
-            alert("A movie API error.");
-        });
+        },callback);
     };
     
     service.deleteHistory = function (id, callback) {
         
-        var req = {
+        service.sendRequest({
             method: 'DELETE',
             url: api_url+'/history/'+id
-        };
+        },callback);
+    };
+    
+    service.sendRequest = function(req, callback) {
+        
         $http(req).then(function(response){
             callback(response.data);
         }, function(error){
-            alert("A movie API error.");
+            alert(error);
         });
     };
 

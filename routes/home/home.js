@@ -14,6 +14,7 @@ angular.module('myApp.home', ['ngRoute'])
     $scope.entries = [];
     $scope.now_playing = null;
 
+    //Load all the videos
     API.movies(function(res) {
         $scope.entries = res.entries;
     });

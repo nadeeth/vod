@@ -14,6 +14,7 @@ angular.module('myApp.history', ['ngRoute'])
     $scope.watched_entries = [];
     $scope.now_playing = null;
 
+    //Load all the watched videos from history
     API.watched(function(res) {
         $scope.watched_entries = res;
     });
