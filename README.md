@@ -10,10 +10,11 @@
 
 ## API - Installation
 
-1. Clone this [repository](https://github.com/nadeeth/vod-api.git) or download the [latest build](https://github.com/nadeeth/vod-api/archive/master.zip).
-2. Run the command "npm install" to install all the dependencies.
-3. Edit "config.js" and set MongoDB connection string.
-4. Run the command "npm start" to start server.
+1. Install the latest versions of NodeJs and MongoDB. 
+2. Clone this [repository](https://github.com/nadeeth/vod-api.git) or download the [latest build](https://github.com/nadeeth/vod-api/archive/master.zip).
+3. Run the command "npm install" to install all the dependencies.
+4. Edit "config.js" and set MongoDB connection string.
+5. Run the command "npm start" to start server.
 
 To run the server in development mode "DEBUG=weasel:* npm run-script devstart" or in Windows "set DEBUG=weasel:* & npm run-script devstart". Development mode uses Nodemon to run the server (Nodemon restarts the server when you edit and save files).
 
